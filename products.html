@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลิตภัณฑ์ - NICHIDAI (THAILAND)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* เพิ่ม Animation ใน Tailwind */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <header class="bg-gray-900 text-white fixed w-full shadow-lg z-10">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <!-- โลโก้ + ชื่อบริษัท -->
+            <div class="flex items-center space-x-3">
+                <a href="index.html">
+                    <img src="images/logo Nichidai.jpg" alt="Nichidai Logo" class="h-12 w-auto" loading="lazy">
+                </a>
+                <span class="text-xl font-semibold">นิชิได (ประเทศไทย) จำกัด<br>NICHIDAI (THAILAND) CO.,LTD.</span>
+            </div>
+
+            <!-- เมนู -->
+            <nav>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="index.html" class="hover:text-gray-400">หน้าแรก</a></li>
+                    <li><a href="about.html" class="hover:text-gray-400">เกี่ยวกับเรา</a></li>
+                    <li><a href="products.html" class="hover:text-gray-400">ผลิตภัณฑ์</a></li>
+                    <li><a href="quality.html" class="hover:text-gray-400">มาตรฐาน</a></li>
+                    <li><a href="contact.html" class="hover:text-gray-400">ติดต่อเรา</a></li>
+                </ul>
+            </nav>
+
+            <!-- ปุ่มเมนูมือถือ -->
+            <button id="menu-btn" class="md:hidden block text-white text-2xl" aria-label="เปิดเมนู">&#9776;</button>
+        </div>
+
+        <!-- เมนูมือถือ -->
+        <ul id="mobile-menu" class="hidden flex-col bg-gray-800 text-white text-center py-4 absolute w-full transform transition-transform duration-300 ease-in-out">
+            <li class="py-2"><a href="index.html" class="hover:text-orange-400">หน้าแรก</a></li>
+            <li class="py-2"><a href="about.html" class="hover:text-orange-400">เกี่ยวกับเรา</a></li>
+            <li class="py-2"><a href="products.html" class="hover:text-orange-400">ผลิตภัณฑ์</a></li>
+            <li class="py-2"><a href="quality.html" class="hover:text-orange-400">มาตรฐาน</a></li>
+            <li class="py-2"><a href="contact.html" class="hover:text-orange-400">ติดต่อเรา</a></li>
+        </ul>
+
+        <!-- ปุ่มปิดเมนูมือถือ -->
+        <button id="close-btn" class="hidden text-white text-2xl absolute top-4 right-4" aria-label="ปิดเมนู">&#10005;</button>
+    </header>
+
+    <!-- Section ผลิตภัณฑ์ -->
+    <section class="container mx-auto mt-20 p-6">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">ผลิตภัณฑ์ของเรา</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white shadow-md rounded-lg p-4 text-center animate-fade-in">
+                <img src="images/product1.jpg" alt="ผลิตภัณฑ์ 1" class="rounded-lg mb-4" loading="lazy">
+                <h2 class="text-xl font-semibold">ชิ้นส่วนเครื่องยนต์</h2>
+                <p class="text-gray-600">ชิ้นส่วนโลหะคุณภาพสูงสำหรับเครื่องยนต์</p>
+                <button class="mt-4 bg-orange-500 px-4 py-2 text-white rounded hover:bg-orange-600 transition duration-300">ดูรายละเอียด</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white shadow-md rounded-lg p-4 text-center animate-fade-in">
+                <img src="images/product2.jpg" alt="ผลิตภัณฑ์ 2" class="rounded-lg mb-4" loading="lazy">
+                <h2 class="text-xl font-semibold">ชิ้นส่วนตัวถังรถยนต์</h2>
+                <p class="text-gray-600">ออกแบบเพื่อความแข็งแรงและทนทาน</p>
+                <button class="mt-4 bg-orange-500 px-4 py-2 text-white rounded hover:bg-orange-600 transition duration-300">ดูรายละเอียด</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white shadow-md rounded-lg p-4 text-center animate-fade-in">
+                <img src="images/product3.jpg" alt="ผลิตภัณฑ์ 3" class="rounded-lg mb-4" loading="lazy">
+                <h2 class="text-xl font-semibold">อะไหล่ช่วงล่าง</h2>
+                <p class="text-gray-600">ผลิตจากวัสดุคุณภาพสูง รองรับแรงกระแทก</p>
+                <button class="mt-4 bg-orange-500 px-4 py-2 text-white rounded hover:bg-orange-600 transition duration-300">ดูรายละเอียด</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- เกี่ยวกับบริษัท -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">เกี่ยวกับเรา</h3>
+                    <p class="text-gray-400">นิชิได (ประเทศไทย) จำกัด เป็นผู้นำด้านการผลิตชิ้นส่วนโลหะรถยนต์ด้วยมาตรฐานระดับสากล</p>
+                </div>
+
+                <!-- ลิงก์ด่วน -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">ลิงก์ด่วน</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-orange-400">หน้าแรก</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-orange-400">เกี่ยวกับเรา</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-orange-400">ผลิตภัณฑ์</a></li>
+                        <li><a href="quality.html" class="text-gray-400 hover:text-orange-400">มาตรฐาน</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-orange-400">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+
+                <!-- ติดต่อเรา -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">ติดต่อเรา</h3>
+                    <p class="text-gray-400">ที่อยู่: 123 ถนนสุขุมวิท กรุงเทพฯ</p>
+                    <p class="text-gray-400">โทรศัพท์: 02-123-4567</p>
+                    <p class="text-gray-400">อีเมล: info@nichidai-thailand.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>&copy; 2024 NICHIDAI (THAILAND) CO.,LTD. | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript สำหรับเมนูมือถือ -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            closeBtn.classList.toggle("hidden");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            closeBtn.classList.add("hidden");
+        });
+    </script>
+
+</body>
+</html>
