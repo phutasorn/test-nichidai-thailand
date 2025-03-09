@@ -6,21 +6,20 @@
     <title>มาตรฐานคุณภาพ - NICHIDAI (THAILAND)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* เพิ่ม Animation ใน Tailwind */
+        /* Animation Fade-in */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .animate-fade-in {
             animation: fadeIn 1s ease-out;
         }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 pt-20"> <!-- ป้องกัน Navbar บังเนื้อหา -->
 
     <!-- Navbar -->
-    <header class="bg-gray-900 text-white fixed w-full shadow-lg z-10">
+    <header class="bg-gray-900 text-white fixed top-0 left-0 w-full shadow-lg z-50">
         <div class="container mx-auto flex justify-between items-center p-4">
             <!-- โลโก้ + ชื่อบริษัท -->
             <div class="flex items-center space-x-3">
@@ -46,20 +45,17 @@
         </div>
 
         <!-- เมนูมือถือ -->
-        <ul id="mobile-menu" class="hidden flex-col bg-gray-800 text-white text-center py-4 absolute w-full transform transition-transform duration-300 ease-in-out">
+        <ul id="mobile-menu" class="hidden flex-col bg-gray-800 text-white text-center py-4 absolute w-full top-16 left-0 shadow-md">
             <li class="py-2"><a href="index.html" class="hover:text-orange-400">หน้าแรก</a></li>
             <li class="py-2"><a href="about.html" class="hover:text-orange-400">เกี่ยวกับเรา</a></li>
             <li class="py-2"><a href="products.html" class="hover:text-orange-400">ผลิตภัณฑ์</a></li>
             <li class="py-2"><a href="quality.html" class="hover:text-orange-400">มาตรฐาน</a></li>
             <li class="py-2"><a href="contact.html" class="hover:text-orange-400">ติดต่อเรา</a></li>
         </ul>
-
-        <!-- ปุ่มปิดเมนูมือถือ -->
-        <button id="close-btn" class="hidden text-white text-2xl absolute top-4 right-4" aria-label="ปิดเมนู">&#10005;</button>
     </header>
 
     <!-- Section มาตรฐานคุณภาพ -->
-    <section class="container mx-auto mt-20 p-6">
+    <section class="container mx-auto mt-10 p-6">
         <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">มาตรฐานคุณภาพของเรา</h1>
         
         <div class="flex flex-col md:flex-row items-center animate-fade-in">
@@ -70,6 +66,19 @@
             </div>
         </div>
     </section>
+
+    <!-- JavaScript สำหรับเมนูมือถือ -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
@@ -107,22 +116,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript สำหรับเมนูมือถือ -->
-    <script>
-        const menuBtn = document.getElementById("menu-btn");
-        const closeBtn = document.getElementById("close-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        menuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-            closeBtn.classList.toggle("hidden");
-        });
-
-        closeBtn.addEventListener("click", () => {
-            mobileMenu.classList.add("hidden");
-            closeBtn.classList.add("hidden");
-        });
-    </script>
+ 
 
 </body>
 </html>
